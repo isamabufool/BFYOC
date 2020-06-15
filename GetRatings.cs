@@ -22,7 +22,6 @@ namespace BFYOC.Functions
             ILogger log)
         {
             log.LogInformation("GetRatings function processed a request.");
-
             string userid = req.Query["userId"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
