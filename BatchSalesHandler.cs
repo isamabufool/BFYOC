@@ -21,7 +21,8 @@ namespace BFYOC
         [FunctionName("BatchSalesHandler")]
         public static async Task Run([EventHubTrigger("pos-sales-events", Connection = "EH_CS")] EventData[] events, ILogger log)
         {
-            var exceptions = new List<Exception>();
+           var exceptions = new List<Exception>();
+           /*  
             string DatabaseName = Environment.GetEnvironmentVariable("COSMOS_DB_NAME");
             string CollectionName = Environment.GetEnvironmentVariable("COSMOS_SALES");
             string ConnectionStringSetting = Environment.GetEnvironmentVariable("COSMOS_CS");
@@ -51,7 +52,7 @@ namespace BFYOC
                     exceptions.Add(e);
                 }
             }
-
+ */
             // Once processing of the batch is complete, if any messages in the batch failed processing throw an exception so that there is a record of the failure.
 
             if (exceptions.Count > 1)
