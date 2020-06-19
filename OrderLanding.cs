@@ -68,7 +68,7 @@ namespace BFYOC
 
         }
 
-     
+    
 
         private static string GetUniqueId(string blobUrl,ILogger log)
         {
