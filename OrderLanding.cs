@@ -23,7 +23,8 @@ namespace BFYOC
     {
         [FunctionName("OrderLanding")]
         public static async Task Run([EventGridTrigger]EventGridEvent eventGridEvent, ILogger log)
-        {            
+        {          
+              
             string connectionString = Environment.GetEnvironmentVariable("ORDER_LANDING_SA");
             string containerName = Environment.GetEnvironmentVariable("ORDER_LANDING_CONTAINER");
             dynamic eventContent = JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
