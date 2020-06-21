@@ -87,9 +87,9 @@ namespace BFYOC
         {
             var jsonRequestString = new
             {
-                orderHeaderDetailsCSVUrl = $"https://orderlanding.blob.core.windows.net/landing/{unique}-OrderHeaderDetails.csv",
-                orderLineItemsCSVUrl = $"https://orderlanding.blob.core.windows.net/landing/{unique}-OrderLineItems.csv",
-                productInformationCSVUrl = $"https://orderlanding.blob.core.windows.net/landing/{unique}-ProductInformation.csv",
+                orderHeaderDetailsCSVUrl = $"https://isamordersstorage.blob.core.windows.net/orders/{unique}-OrderHeaderDetails.csv",
+                orderLineItemsCSVUrl = $"https://isamordersstorage.blob.core.windows.net/orders/{unique}-OrderLineItems.csv",
+                productInformationCSVUrl = $"https://isamordersstorage.blob.core.windows.net/orders/{unique}-ProductInformation.csv",
             };
             return JsonConvert.SerializeObject(jsonRequestString);                        
         }
